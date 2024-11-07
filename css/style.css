@@ -134,7 +134,7 @@ li {
     backdrop-filter: blur(10px);
     border-radius: 10px;
     color: #17161b;
-    margin: 10px;
+    margin: 10px 0;
 }
 
 .product-info h2 {
