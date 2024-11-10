@@ -26,8 +26,8 @@
         </nav>
 
         <div class="container py-5">
-            <div class="single-product">
-                <div class="row align-items-center">
+            <div id="banner" class="single-product">
+                <!-- <div class="row align-items-center">
                     <div class="col-lg-6">
                         <div class="product-details">
                             <h1>Apple Iphone 13 Pro Max</h1>
@@ -42,7 +42,7 @@
                             <img src="./img/cover-image.png" alt="">
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -58,131 +58,165 @@
                         </g>
                     </svg>
 
-                    <input id="query" class="input" type="search" placeholder="Search..." name="searchbar" />
+                    <input id="searchQuery" class="input" type="search" placeholder="Search..." name="searchbar" />
+                    <button class="search-Btn" onclick="searchValue()">
+                        Search
+                    </button>
+                </div>
+                <p id="searchResult-text">The search results will be displayed here "<span id="searchResult"></span>"
+                </p>
+            </div>
+            <div id="products" class="row">
+                <!-- <div class="col-lg-3">
+                    <div class="product">
+                        <div class="product-img">
+                            <img src="./img/cover-image.png" alt="">
+                        </div>
+                        <div class="product-info">
+                            <h2>Iphone 13 Pro Max</h2>
+                            <p> There are many variations of passages of available, but the majority have suffered </p>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <h2 class="price">$222</h2>
+                                <button>Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="product">
+                        <div class="product-img">
+                            <img src="./img/cover-image.png" alt="">
+                        </div>
+                        <div class="product-info">
+                            <h2>Iphone 13 Pro Max</h2>
+                            <p> There are many variations of passages of available, but the majority have suffered </p>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <h2 class="price">$222</h2>
+                                <button>Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="product">
+                        <div class="product-img">
+                            <img src="./img/cover-image.png" alt="">
+                        </div>
+                        <div class="product-info">
+                            <h2>Iphone 13 Pro Max</h2>
+                            <p> There are many variations of passages of available, but the majority have suffered </p>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <h2 class="price">$222</h2>
+                                <button>Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="product">
+                        <div class="product-img">
+                            <img src="./img/cover-image.png" alt="">
+                        </div>
+                        <div class="product-info">
+                            <h2>Iphone 13 Pro Max</h2>
+                            <p> There are many variations of passages of available, but the majority have suffered </p>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <h2 class="price">$222</h2>
+                                <button>Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="product">
+                        <div class="product-img">
+                            <img src="./img/cover-image.png" alt="">
+                        </div>
+                        <div class="product-info">
+                            <h2>Iphone 13 Pro Max</h2>
+                            <p> There are many variations of passages of available, but the majority have suffered </p>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <h2 class="price">$222</h2>
+                                <button>Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="product">
+                        <div class="product-img">
+                            <img src="./img/cover-image.png" alt="">
+                        </div>
+                        <div class="product-info">
+                            <h2>Iphone 13 Pro Max</h2>
+                            <p> There are many variations of passages of available, but the majority have suffered </p>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <h2 class="price">$222</h2>
+                                <button>Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="product">
+                        <div class="product-img">
+                            <img src="./img/cover-image.png" alt="">
+                        </div>
+                        <div class="product-info">
+                            <h2>Iphone 13 Pro Max</h2>
+                            <p> There are many variations of passages of available, but the majority have suffered </p>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <h2 class="price">$222</h2>
+                                <button>Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="product">
+                        <div class="product-img">
+                            <img src="./img/cover-image.png" alt="">
+                        </div>
+                        <div class="product-info">
+                            <h2>Iphone 13 Pro Max</h2>
+                            <p> There are many variations of passages of available, but the majority have suffered </p>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <h2 class="price">$222</h2>
+                                <button>Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            <div class="show">
+                <button id="show" onclick="show()" class="show-Btn">Show All Results</button>
+            </div>
+
+            <div id="modal" class="modal-custom">
+                <div class="modal-body">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-4">
+                            <div class="product">
+                                <div class="d-flex justify-content-end">
+                                    <button onclick="closeBtn()" class="close">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                                            viewBox="0 0 1024 1024">
+                                            <path fill="currentColor"
+                                                d="M195.2 195.2a64 64 0 0 1 90.496 0L512 421.504L738.304 195.2a64 64 0 0 1 90.496 90.496L602.496 512L828.8 738.304a64 64 0 0 1-90.496 90.496L512 602.496L285.696 828.8a64 64 0 0 1-90.496-90.496L421.504 512L195.2 285.696a64 64 0 0 1 0-90.496" />
+                                        </svg>
+                                    </button>
+                                </div>
+
+                                <div id="product-view">
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-3">
-                    <div class="product">
-                        <div class="product-img">
-                            <img src="./img/cover-image.png" alt="">
-                        </div>
-                        <div class="product-info">
-                            <h2>Iphone 13 Pro Max</h2>
-                            <p> There are many variations of passages of available, but the majority have suffered </p>
-                            <div class="d-flex align-items-center justify-content-between">
-                                <h2 class="price">$222</h2>
-                                <button>Buy Now</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="product">
-                        <div class="product-img">
-                            <img src="./img/cover-image.png" alt="">
-                        </div>
-                        <div class="product-info">
-                            <h2>Iphone 13 Pro Max</h2>
-                            <p> There are many variations of passages of available, but the majority have suffered </p>
-                            <div class="d-flex align-items-center justify-content-between">
-                                <h2 class="price">$222</h2>
-                                <button>Buy Now</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="product">
-                        <div class="product-img">
-                            <img src="./img/cover-image.png" alt="">
-                        </div>
-                        <div class="product-info">
-                            <h2>Iphone 13 Pro Max</h2>
-                            <p> There are many variations of passages of available, but the majority have suffered </p>
-                            <div class="d-flex align-items-center justify-content-between">
-                                <h2 class="price">$222</h2>
-                                <button>Buy Now</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="product">
-                        <div class="product-img">
-                            <img src="./img/cover-image.png" alt="">
-                        </div>
-                        <div class="product-info">
-                            <h2>Iphone 13 Pro Max</h2>
-                            <p> There are many variations of passages of available, but the majority have suffered </p>
-                            <div class="d-flex align-items-center justify-content-between">
-                                <h2 class="price">$222</h2>
-                                <button>Buy Now</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="product">
-                        <div class="product-img">
-                            <img src="./img/cover-image.png" alt="">
-                        </div>
-                        <div class="product-info">
-                            <h2>Iphone 13 Pro Max</h2>
-                            <p> There are many variations of passages of available, but the majority have suffered </p>
-                            <div class="d-flex align-items-center justify-content-between">
-                                <h2 class="price">$222</h2>
-                                <button>Buy Now</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="product">
-                        <div class="product-img">
-                            <img src="./img/cover-image.png" alt="">
-                        </div>
-                        <div class="product-info">
-                            <h2>Iphone 13 Pro Max</h2>
-                            <p> There are many variations of passages of available, but the majority have suffered </p>
-                            <div class="d-flex align-items-center justify-content-between">
-                                <h2 class="price">$222</h2>
-                                <button>Buy Now</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="product">
-                        <div class="product-img">
-                            <img src="./img/cover-image.png" alt="">
-                        </div>
-                        <div class="product-info">
-                            <h2>Iphone 13 Pro Max</h2>
-                            <p> There are many variations of passages of available, but the majority have suffered </p>
-                            <div class="d-flex align-items-center justify-content-between">
-                                <h2 class="price">$222</h2>
-                                <button>Buy Now</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="product">
-                        <div class="product-img">
-                            <img src="./img/cover-image.png" alt="">
-                        </div>
-                        <div class="product-info">
-                            <h2>Iphone 13 Pro Max</h2>
-                            <p> There are many variations of passages of available, but the majority have suffered </p>
-                            <div class="d-flex align-items-center justify-content-between">
-                                <h2 class="price">$222</h2>
-                                <button>Buy Now</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        </div>
         </div>
     </section>
     <footer class="footer-section">
@@ -269,6 +303,7 @@
             </div>
         </div>
     </footer>
+    <script src="./script/custom.js"></script>
 </body>
 
 </html>
