@@ -7,7 +7,12 @@ const fatchData = async (query) => {
         const response = await fetch(`https://openapi.programming-hero.com/api/phones?search=${query}`);
         const data = await response.json();
         product = data.data;
-        productLoad();
+        loading(true);
+        document.getElementById('show').style.display = 'none';
+        setTimeout(() => {
+            product = data.data;
+            productLoad();
+        }, 1000);
     } catch (err) {
         console.log(err);
     }
@@ -55,6 +60,10 @@ const searchValue = () => {
     if (inputValue === '') {
         inputField.style.border = '1px solid red';
     } else {
+        loading(true);
+        const products = document.getElementById('products');
+        products.textContent = "";
+        document.getElementById('show').style.display = 'none';
         fatchData(inputValue);
         const searchResult = document.getElementById('searchResult');
         if (inputValue !== '') {
@@ -94,6 +103,7 @@ const productLoad = (showAllResult = false) => {
         </div>
         `
     })
+    loading(false);
 }
 const show = () => {
     productLoad(true);
@@ -150,4 +160,12 @@ const viewDetails = (slug) => {
 }
 const closeBtn = () => {
     viewProductDetailsApi('', false)
+}
+const loading = (isloader) => {
+    const loader = document.getElementById('loader');
+    if (isloader) {
+        loader.style.display = 'block';
+    } else {
+        loader.style.display = 'none';
+    }
 }

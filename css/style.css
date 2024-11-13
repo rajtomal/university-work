@@ -15,19 +15,19 @@ li {
 }
 
 .nav-banner {
-    background-image: linear-gradient(45deg, #85ffbe49 0%, #fffb7d4d 100%);
+    /* background-image: linear-gradient(45deg, #85ffbe49 0%, #fffb7d4d 100%); */
 
 }
 
 .nav-bar {
-    background: rgba(233, 233, 233, 0.5);
+    background: rgba(80, 85, 149, 0.4);
     padding: 14px 0;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(30px);
 }
 
 .nav-bar h2 {
     font-size: 22px;
-    color: #17161b;
+    color: #ffffff;
 }
 
 .nav-bar button {
@@ -43,10 +43,10 @@ li {
 .single-product {
     padding: 40px;
     margin-top: 40px;
-    background: rgba(224, 224, 224, 0.5);
+    background: rgba(80, 85, 149, 0.4);
     backdrop-filter: blur(50px);
     border-radius: 10px;
-    color: #17161b;
+    color: #ffffff;
 }
 
 .product-details h1 {
@@ -58,7 +58,7 @@ li {
 .product-details p {
     font-size: 14px;
     font-weight: 400;
-    color: #4e4c53;
+    color: #cecccc;
 }
 
 .product-details button {
@@ -85,11 +85,11 @@ li {
 
 /* main product */
 .main-product {
-    background-image: url(../img/background.jpg);
+    /* background-image: url(../img/background.jpg); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 60px 0;
+    padding-bottom: 60px;
 }
 
 .search {
@@ -111,14 +111,13 @@ li {
     height: 45px;
     padding-left: 2.5rem;
     padding-right: 94px;
-    /* box-shadow: 0 0 0 1.5px #2b2c37, 0 0 25px -17px #000; */
     border: 0;
     border-radius: 12px;
-    background: rgba(255, 255, 255, 0.4);
-    border: 1px solid #e9e9e9;
+    background: rgba(80, 85, 149, 0.4);
+    border: 1px solid rgba(80, 85, 149, 0.6);
     backdrop-filter: blur(10px);
     outline: none;
-    color: #17161b;
+    color: #ffffff;
     transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
     cursor: text;
     z-index: 0;
@@ -131,7 +130,7 @@ li {
 .search-icon {
     position: absolute;
     left: 1rem;
-    fill: #17161b;
+    fill: #ffffff;
     width: 1rem;
     height: 1rem;
     pointer-events: none;
@@ -154,11 +153,11 @@ li {
 
 .product {
     padding: 20px;
-    background: rgba(255, 255, 255, 0.4);
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: rgba(80, 85, 149, 0.4);
+    border: 1px solid rgba(80, 85, 149, 0.5);
     backdrop-filter: blur(10px);
     border-radius: 10px;
-    color: #17161b;
+    color: #ffffff;
     margin: 10px 0;
 }
 
@@ -171,7 +170,7 @@ li {
 .product-info p {
     font-size: 13px;
     font-weight: 400;
-    color: #17161b;
+    color: #cecccc;
 }
 
 .product-info button {
@@ -404,6 +403,7 @@ ul {
     display: none;
     text-align: center;
     padding-top: 20px;
+    color: #fff;
 }
 
 .modal-custom {
@@ -450,15 +450,49 @@ ul {
 #modal {
     display: none;
 }
-.view-title{
+
+.view-title {
     font-size: 16px;
     font-weight: 500;
     margin: 0;
     padding: 0;
 }
-.tag{
+
+.tag {
     font-size: 12px;
     border-radius: 6px;
     padding: 4px 6px;
     background: rgba(255, 255, 255, 0.3);
+}
+
+
+/* loader css */
+.loader {
+    display: none;
+    width: fit-content;
+    margin: 0 auto;
+    font-size: 40px;
+    line-height: 1.5;
+    font-family: system-ui, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ffffff04;
+    -webkit-text-stroke: 1px #ffffff;
+    background:
+        radial-gradient(1.13em at 50% 1.6em, #ffffff 99%, #ffffff00 101%) calc(50% - 1.6em) 0/3.2em 100% text,
+        radial-gradient(1.13em at 50% -0.8em, #ffffff00 99%, #ffffff 101%) 50% .8em/3.2em 100% repeat-x text;
+    animation: l9 2s linear infinite;
+}
+
+.loader:before {
+    content: "Loading";
+}
+
+@keyframes l9 {
+    to {
+        background-position: calc(50% + 1.6em) 0, calc(50% + 3.2em) .8em
+    }
+}
+.main-background{
+    background-image: linear-gradient(45deg, #18184A 0%, #19194B 100%);
 }
