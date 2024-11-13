@@ -93,7 +93,6 @@ li {
     background-size: contain;
     padding-bottom: 60px;
     position: relative;
-    z-index: 1;
 }
 
 .main-product::after {
