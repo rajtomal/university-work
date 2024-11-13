@@ -34,8 +34,9 @@ li {
     border: none;
     padding: 10px 14px;
     border-radius: 6px;
-    background: blueviolet;
-    color: #fff;
+    background: linear-gradient(0deg, #004CFF 0%, #79A1FF 100%);
+    box-shadow: 0px 8px 15px rgba(0, 76, 255, 0.2);
+    color: #ffffff;
 }
 
 
@@ -65,8 +66,9 @@ li {
     border: none;
     padding: 10px 14px;
     border-radius: 6px;
-    background: rgb(46, 43, 226);
-    color: #fff;
+    background: linear-gradient(0deg, #004CFF 0%, #79A1FF 100%);
+    box-shadow: 0px 8px 15px rgba(0, 76, 255, 0.2);
+    color: #ffffff;
 }
 
 .product-img {
@@ -85,11 +87,39 @@ li {
 
 /* main product */
 .main-product {
-    /* background-image: url(../img/background.jpg); */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    /* background-image: url(../img/background.svg); */
+    background-position: fixed;
+    /* background-repeat: no-repeat; */
+    background-size: contain;
     padding-bottom: 60px;
+    position: relative;
+    z-index: 1;
+}
+
+.main-product::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 400px;
+    width: 400px;
+    background: linear-gradient(45deg, #18184A 0%, #c401ad 100%);
+    filter: blur(100px);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.main-product::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 400px;
+    width: 400px;
+    background: linear-gradient(45deg, #18184A 0%, #c401ad 100%);
+    filter: blur(100px);
+    border-radius: 50%;
+    z-index: -1;
 }
 
 .search {
@@ -124,7 +154,7 @@ li {
 }
 
 .input:focus {
-    border-color: rgb(46, 43, 226);
+    border-color: #fff;
 }
 
 .search-icon {
@@ -141,10 +171,11 @@ li {
     position: absolute;
     right: 4px;
     fill: #ffffff;
-    color: #fff;
     font-size: 14px;
     padding: 0 18px;
-    background: rgb(46, 43, 226);
+    background: linear-gradient(0deg, #004CFF 0%, #79A1FF 100%);
+    box-shadow: 0px 8px 15px rgba(0, 76, 255, 0.2);
+    color: #ffffff;
     height: 37px;
     border: none;
     border-radius: 8px;
@@ -175,10 +206,12 @@ li {
 
 .product-info button {
     border: none;
-    padding: 10px 14px;
+    padding: 6px 10px;
     border-radius: 6px;
-    background: rgb(46, 43, 226);
-    color: #fff;
+    background: linear-gradient(0deg, #004CFF 0%, #79A1FF 100%);
+    box-shadow: 0px 8px 15px rgba(0, 76, 255, 0.2);
+    color: #ffffff;
+    font-size: 14px;
 }
 
 .price {
@@ -204,7 +237,7 @@ ul {
 }
 
 .single-cta i {
-    color: rgb(46, 43, 226);
+    color: #fff;
     font-size: 30px;
     float: left;
     margin-top: 8px;
@@ -308,7 +341,7 @@ ul {
     bottom: -15px;
     height: 2px;
     width: 50px;
-    background: rgb(46, 43, 226);
+    background: #fff;
 }
 
 .footer-widget ul li {
@@ -319,7 +352,7 @@ ul {
 }
 
 .footer-widget ul li a:hover {
-    color: rgb(46, 43, 226);
+    color: #fff;
 }
 
 .footer-widget ul li a {
@@ -344,10 +377,11 @@ ul {
     position: absolute;
     right: 0;
     height: 100%;
-    background: rgb(46, 43, 226);
-    color: #fff;
+    background: linear-gradient(0deg, #004CFF 0%, #79A1FF 100%);
+    box-shadow: 0px 8px 15px rgba(0, 76, 255, 0.2);
+    color: #ffffff;
     padding: 13px 20px;
-    border: 1px solid rgb(46, 43, 226);
+    border: none;
     top: 0;
 }
 
@@ -363,7 +397,7 @@ ul {
 }
 
 .copyright-text p a {
-    color: rgb(46, 43, 226);
+    color: #fff;
 }
 
 .footer-menu li {
@@ -372,7 +406,7 @@ ul {
 }
 
 .footer-menu li:hover a {
-    color: rgb(46, 43, 226);
+    color: #fff;
 }
 
 .footer-menu li a {
@@ -391,8 +425,9 @@ ul {
     border: none;
     padding: 10px 14px;
     border-radius: 6px;
-    background: rgb(46, 43, 226);
-    color: #fff;
+    background: linear-gradient(0deg, #004CFF 0%, #79A1FF 100%);
+    box-shadow: 0px 8px 15px rgba(0, 76, 255, 0.2);
+    color: #ffffff;
 }
 
 .hide-Btn {
@@ -493,6 +528,35 @@ ul {
         background-position: calc(50% + 1.6em) 0, calc(50% + 3.2em) .8em
     }
 }
-.main-background{
+
+.main-background {
     background-image: linear-gradient(45deg, #18184A 0%, #19194B 100%);
+    position: relative;
+    z-index: 1
+}
+
+.main-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 400px;
+    width: 400px;
+    background: linear-gradient(45deg, #18184A 0%, #0225ec 100%);
+    filter: blur(100px);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.main-background::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 400px;
+    width: 400px;
+    background: linear-gradient(45deg, #18184A 0%, #011db6 100%);
+    filter: blur(100px);
+    border-radius: 50%;
+    z-index: -1;
 }

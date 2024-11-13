@@ -83,7 +83,7 @@ const productLoad = (showAllResult = false) => {
     const products = document.getElementById('products');
 
     products.innerHTML = '';
-
+    
     displayProduct.forEach((item) => {
         products.innerHTML += `
         <div class="col-lg-3">
